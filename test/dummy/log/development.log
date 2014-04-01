@@ -1,0 +1,601 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 12:05:17 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 12:05:23 +0500
+
+ActionController::RoutingError (No route matches [GET] "/test_api"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.3ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (185.9ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 12:26:32 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant TestApi::TestApiController::HTTParty):
+  /home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:19:in `test_api'
+  /home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:8:in `api_test'
+  actionpack (4.0.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__93929708297052623__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__999291298490215137__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (65.5ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 12:35:48 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 1ms
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `initialize'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `open'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:877:in `connect'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:851:in `start'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:1367:in `request'
+  httparty (0.13.0) lib/httparty/request.rb:93:in `perform'
+  httparty (0.13.0) lib/httparty.rb:499:in `perform_request'
+  httparty (0.13.0) lib/httparty.rb:435:in `get'
+  httparty (0.13.0) lib/httparty.rb:537:in `get'
+  /home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:19:in `test_api'
+  /home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:8:in `api_test'
+  actionpack (4.0.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2992784334048635246__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3974874019852383852__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.9ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 12:36:31 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 14:45:42 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 36ms
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 14:46:14 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 24ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.6ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.7ms)
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 14:46:16 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+
+
+Started GET "/test_api/" for 127.0.0.1 at 2014-04-01 14:47:34 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 40ms
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:48:58 +0500
+
+ActionController::RoutingError (No route matches [GET] "/test_api/immunization_status.json"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.4ms)
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:49:54 +0500
+
+ActionController::RoutingError (No route matches [GET] "/test_api/immunization_status.json"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.4ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (51.4ms)
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:50:10 +0500
+
+ActionController::RoutingError (No route matches [GET] "/test_api/immunization_status.json"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.1ms)
+
+
+Started GET "/test_api/immunization_status?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:51:35 +0500
+Processing by TestApi::TestApiController#immunization_status as HTML
+  Parameters: {"person_id"=>"123", "state"=>"fl"}
+Redirected to http://localhost:3000/test_api/immunization_status?severity=high
+Completed 0  in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:51:49 +0500
+Processing by TestApi::TestApiController#immunization_status as JSON
+  Parameters: {"person_id"=>"123", "state"=>"fl"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api" for 127.0.0.1 at 2014-04-01 14:52:00 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 28ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:53:22 +0500
+Processing by TestApi::TestApiController#immunization_status as JSON
+  Parameters: {"person_id"=>"123", "state"=>"fl"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 14:53:26 +0500
+Processing by TestApi::TestApiController#immunization_status as JSON
+  Parameters: {"person_id"=>"123", "state"=>"fl"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test_api" for 127.0.0.1 at 2014-04-01 14:53:38 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed   in 56746ms
+
+
+Started GET "/test_api" for 127.0.0.1 at 2014-04-01 14:57:57 +0500
+
+SyntaxError (/home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:30: syntax error, unexpected keyword_end):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:228:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:228:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__20771752584581416__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  railties (4.0.4) lib/rails/rack/debugger.rb:20:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.9ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.4ms)
+
+
+Started GET "/test_api" for 127.0.0.1 at 2014-04-01 14:58:25 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+Completed 500 Internal Server Error in 70158ms
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `initialize'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `open'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:877:in `connect'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:851:in `start'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/net/http.rb:1367:in `request'
+  httparty (0.13.0) lib/httparty/request.rb:93:in `perform'
+  httparty (0.13.0) lib/httparty.rb:499:in `perform_request'
+  httparty (0.13.0) lib/httparty.rb:435:in `get'
+  httparty (0.13.0) lib/httparty.rb:537:in `get'
+  /home/ali/Projects/gem/mountable/test_api/app/controllers/test_api/test_api_controller.rb:7:in `api_test'
+  actionpack (4.0.4) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3977429404664128292__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__20771752584581416__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  railties (4.0.4) lib/rails/rack/debugger.rb:20:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ali/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/ali/.rvm/gems/ruby-2.0.0-p195@api-gem/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+
+
+Started GET "/test_api" for 127.0.0.1 at 2014-04-01 15:01:30 +0500
+Processing by TestApi::TestApiController#api_test as HTML
+
+
+Started GET "/test_api/immunization_status.json?person_id=123&state=fl" for 127.0.0.1 at 2014-04-01 15:01:31 +0500
+Processing by TestApi::TestApiController#immunization_status as JSON
+  Parameters: {"person_id"=>"123", "state"=>"fl"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+Completed 200 OK in 308ms (Views: 0.8ms | ActiveRecord: 0.0ms)
