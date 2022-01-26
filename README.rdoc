@@ -1,3 +1,6 @@
 = TestApi
 
 This project rocks and uses MIT-LICENSE.
+
+
+Documentation is added in seprate repo to access that repo please ask for access.
